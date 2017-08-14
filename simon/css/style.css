@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Roboto)
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+button{
+  background-color: #f1f1f7;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #999;
+}
+.container{
+  padding: 20px;
+  font-size: 40px;
+  font-color: #34aa88;
+  text-align:center;
+}
+button:hover{
+  background-color: #fff;
+  border: 1px solid #666;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.wrapper{
+  background-color: #fff;
+  width: 500px;
+  height: 500px;
+  margin: 5% auto;
+  padding: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }   
+}
+
+.blink{
+  opacity: 0.2;
+}
+
+.box{
+  float: left;
+  background-color: #f1f1f1;
+  width: 250px;
+  height: 250px;
+  font-size: 0;
+  cursor: pointer;
+  transition: background-color 0.5s opacity 0.3s;
+}
+
+@media only screen and (max-width: 500px){
+  .box{
+    width: 50%;
+  }
+}
+
+.box:hover{
+  opacity: 0.6;
+}
+
+#box1{
+  background-color: #5499C7;
+}
+
+#box2{
+  background-color: #922B21;
+}
+
+#box3{
+  background-color: #D4AC0D;
+}
+
+#box4{
+  background-color: #633974;
+}
+
+.tip{
+  width: 500px;
+  text-align:center;
+  margin: 20px auto;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+
+@media only screen and (max-width: 500px) {
+    .tip {
+        width: 100%;
+        text-align: center;
+    }   
+}
+
+.controls{
+  width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .controls {
+        width: 100%;
+      text-align: center;
+    }   
+}
+
+.controls .control{
+  display: inline-block;
+  margin:10px 40px;
+}
+
+@media only screen and (max-width: 500px) {
+    .controls .control{
+      display: block;
+      text-align:center;
+    }
+  #start_button{
+    margin: 0 auto;
+  }
+}
+
+.step-count strong{
+  margin-right: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 14px;
+  top:5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #34aa88;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
